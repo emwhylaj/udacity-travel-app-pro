@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Udacity Travel App</title>
+  <link
+   href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+
+ <body>
+  <header>
+   <h1>Travel App</h1>
+  </header>
+
+  <main id="app">
+   <section>
+    <form class="" action="">
+     <label for="destination">Destination</label>
+     <input
+      type="text"
+      name="destination"
+      id="destination"
+      placeholder="enter destination"
+      required
+     />
+     <br />
+     <label for="departure-date">Departure date</label>
+     <!-- Added placeholder for browsers that do not support type="date" -->
+     <input
+      type="date"
+      name="departure-date"
+      id="departure-date"
+      placeholder="YYYY-MM-DD"
+      required
+     />
+     <br />
+     <label for="arrival-date">Arrival date</label>
+     <!-- Added placeholder for browsers that do not support type="date" -->
+     <input
+      type="date"
+      name="arrival-date"
+      id="arrival-date"
+      placeholder="YYYY-MM-DD"
+      required
+     />
+     <br />
+     <button id="generate" type="submit">Generate</button>
+    </form>
+   </section>
+
+   <section id="entry">
+    <h2 class="title">Output</h2>
+   </section>
+  </main>
+
+  <footer id="footer">
+   <p class="center">Power by emwhylaj </p>
+  </footer>
+
+  <script>
+   // Check that service workers are supported
+   if ("serviceWorker" in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener("load", () => {
+     navigator.serviceWorker.register("/service-worker.js");
+    });
+   }
+  </script>
+ </body>
+</html>
